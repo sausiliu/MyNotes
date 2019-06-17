@@ -212,7 +212,6 @@ mysql>
    [WHERE condition1 [AND [OR]] condition2.....
    ```
 
-
 ### mysql 插入数据
 
 ```sql
@@ -221,4 +220,24 @@ INSERT INTO table_name
 VALUES
 (value1, value2, value3, ...valueN)
 ```
+
+flow
+st=>start: Start
+op=>operation: Your Operation
+cond=>condition: Yes or No?
+e=>end
+st->op->cond
+cond(yes)->e
+cond(no)->op
+
+### where 条件
+
+|  操作符  |       描述                                |       实例        |
+|:--------|:-----------------------------------------|:----------------:|
+|    =    |等号，检测两个值是否相等，如果相等返回true      |(A = B) 返回false。|
+| <>,!=   |不等于，检测两个值是否相等，如果不相等返回true   |(A != B) 返回 true。|
+|    >    |大于号，检测左边的值是否大于右边的值, 如果左边的<br>值大于右边的值返回true|(A > B) 返回false。|
+|    <    |小于号，检测左边的值是否小于右边的值, 如果左边的<br>值小于右边的值返回true|(A < B) 返回 true。|
+|   >=    |大于等于号，检测左边的值是否大于或等于右边的值, <br>如果左边的值大于或等于右边的值返回true|(A >= B) 返回false。|
+|    =<   |小于等于号，检测左边的值是否小于于或等于右边的值,<br> 如果左边的值小于或等于右边的值返回true|(A <= B) 返回 true。|
 
