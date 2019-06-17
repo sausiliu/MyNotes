@@ -16,17 +16,38 @@ mysql 应用很广的一种关系型数据库。其中的关系体现在“表�
 sudo apt-get install php7.0 php7.0-mysql
 ```
 
+## 数据类型
+
+* 数字类型
+* 日期和时间
+* 字符串类型
+
 ## 常用操作
 
 ### 查看mysql状态
 
-* 查看mysql服务是否启动
+* 查看mysql服务是否启动 (linux)
 
-> ps -ef | grep mysql
+    > ps -ef | grep mysql
 
-or
+    or
 
-> systemctl status mysql.service
+    > systemctl status mysql.service
+
+### mysql用户登陆
+
+* 登陆
+
+    > mysql -h ip -u name -p
+
+* 指定数据库登陆
+
+    > mysql -h ip -u name -D databasename -p
+
+-D : 数据库名字
+-h : 该命令用于指定客户端所要登录的MySQL主机名, 登录当前机器该参数可以省略;
+-u : 所要登录的用户名;
+-p : 告诉服务器将会使用一个密码来登录, 如果所要登录的用户名密码为空, 可以忽略此选项。
 
 ### mysql用户管理
 
