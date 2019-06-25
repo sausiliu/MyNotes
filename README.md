@@ -2,4 +2,6 @@
 
 Notes about bigdata
 
+* IDEA 
+
 
