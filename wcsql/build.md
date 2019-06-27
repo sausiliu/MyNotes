@@ -132,3 +132,60 @@ alter table 从表 add constraint 外键（形如：FK_从表_主表） foreign 
 ```
 alter table “tablename” drop foreign key 外键（形如：FK_从表_主表）;
 ```
+### 数据内容去重
+
+ DISTINCT 关键字指示 MySQL 消除重复的记录值
+ ```
+ SELECT DISTINCT <字段名> FROM <表名>;
+ ```
+
+### 别名
+
+当表名很长或者执行一些特殊查询的时候，为了方便操作或者需要多次使用相同的表时，可以为表指定别名，用这个别名代替表原来的名称。
+```
+<表名> [AS] <别名>
+mysql> SELECT stu.name,stu.height
+    -> FROM tb_students_info AS stu;
+    +--------+--------+
+| name   | height |
++--------+--------+
+| Dany   |    160 |
+| Green  |    158 |
+| Henry  |    185 |
+| Jane   |    162 |
+| Jim    |    175 |
+| John   |    172 |
+| Lily   |    165 |
+| Susan  |    170 |
+| Thomas |    178 |
+| Tom    |    165 |
++--------+--------+
+10 rows in set (0.04 sec)
+```
+### 查询结果排序
+
+```
+ORDER BY {<列名> | <表达式> | <位置>} [ASC|DESC]
+```
+默认为ASC 升序
+实例
+```
+查询 tb_students_info 表中的 name 和 height 字段，先按 height 排序，再按 name 排序，输入的 SQL 语句和执行结果如下所示。
+mysql> SELECT name,height
+    -> FROM tb_students_info
+    -> ORDER BY height,name;
++--------+--------+
+| name   | height |
++--------+--------+
+| Green  |    158 |
+| Dany   |    160 |
+| Jane   |    162 |
+| Lily   |    165 |
+| Tom    |    165 |
+| Susan  |    170 |
+| John   |    172 |
+| Jim    |    175 |
+| Thomas |    178 |
+| Henry  |    185 |
++--------+--------+
+```
