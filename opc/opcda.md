@@ -6,6 +6,10 @@
 
 [Connection to Matrikon OPC Simulation Server via Utgard](https://stackoverflow.com/questions/31701972/connection-to-matrikon-opc-simulation-server-via-utgard)
 
+### 启动参数(IDEA)
+
+ -h 127.0.0.1 -d lenovo -u xx-p xx -c F8582CF2-88FB-11D0-B850-00C0F0104305 -i "Triangle Waves.Money"
+
 ### 参考code
 
 ```java
