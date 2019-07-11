@@ -21,7 +21,11 @@ org.jinterop.dcom.common.JIException: Access is denied, please check whether the
 
 ### 参考内容
 
-一下内容转自[链接](http://foeris.com/display/blog/opc.kepware)
+一下内容转自  
+
+[链接](http://foeris.com/display/blog/opc.kepware)
+[java – Utgard – 拒绝访问](https://codeday.me/bug/20190520/1141862.html)
+[stackoverflow - Utgard - Access denied](https://stackoverflow.com/questions/18076924/utgard-access-denied)
 
 Note:
 
